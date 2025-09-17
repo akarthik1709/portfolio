@@ -1,0 +1,56 @@
+#skills {
+    background-color: $white-color;
+    background-image: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );
+  color: black;
+  height: 100%;
+  border-top: 0px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  padding-bottom: 10%;
+  
+  @include respond(tab-land) {
+    height: auto;
+    -webkit-animation-delay: inherit;
+    clear: inherit;
+
+  }
+.skills-table {
+    border-collapse: inherit;
+    width: 100%;
+    table-layout: auto;
+    margin-bottom: 20px;
+    @include respond(tab-land) {
+      margin-bottom: 0;
+    }
+    th, td {
+      text-align: center;
+      padding: 10px;
+      border-bottom: 1px solid $border-color;
+    }
+    th {
+      background-color: rgba(220, 237, 239, 0);
+      color: alpha($color: #ffffff)
+    }
+    td {
+      background-color: $secondary-color;
+      color: rgb(255, 255, 255);
+    }
+    @include respond(mobile) {
+        width: 100%;
+        display: block;
+    
+        th, td {
+            display: block;
+            text-align: right;
+            padding: 10px 0;
+        }
+        th {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+}}}
